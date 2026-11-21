@@ -1,0 +1,16 @@
+# 运行产物
+Download/
+cookie.txt
+error.log
+*.db
+
+# 构建
+build/
+dist/
+_internal/
+*.spec
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
