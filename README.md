@@ -65,17 +65,7 @@ python app.py --cli --url "https://www.douyin.com/user/MS4wLjABAAAA..." --mode l
 | `--prune` | 清掉「文件已删除」的索引记录 |
 | `--rebuild` | 按磁盘文件重建索引 |
 
-## 打包为 exe
 
-```bat
-python -m pip install pyinstaller
-pyinstaller --noconfirm --onedir --noconsole --name DouyinDownloader ^
-  --icon assets/app.ico --add-data "assets;assets" ^
-  --collect-all playwright --collect-all sv_ttk --paths . app.py
-```
-
-产物在 `dist\DouyinDownloader\`，约 140 MB（其中 120 MB 是 Playwright 驱动）。
-`--collect-all playwright` 与 `--collect-all sv_ttk` 都是必须的，否则运行时会缺文件。
 
 ## 去重机制
 
